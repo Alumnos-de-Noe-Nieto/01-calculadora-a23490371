@@ -45,4 +45,4 @@ def validar_restas(cadena: str) -> bool:
         else:
             i += 1
 
-    return True 
+    return True

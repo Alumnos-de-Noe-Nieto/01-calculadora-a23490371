@@ -13,7 +13,4 @@ def validar_repeticiones_vld(cadena: str) -> bool:
     """
     Valida que los símbolos V, L y D no se repitan (máximo 1).
     """
-    for patron in PATRONES_INVALIDOS:
-        if patron in cadena:
-            return False
-    return True
+    return all(patron not in cadena for patron in PATRONES_INVALIDOS)

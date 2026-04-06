@@ -13,7 +13,4 @@ def validar_repeticiones_icxm(cadena: str) -> bool:
     """
     Valida que los símbolos I, X, C, M no se repitan más de 3 veces consecutivas.
     """
-    for patron in PATRONES_INVALIDOS:
-        if patron in cadena:
-            return False
-    return True
+    return all(patron not in cadena for patron in PATRONES_INVALIDOS)
